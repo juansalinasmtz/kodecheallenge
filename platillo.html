@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css\main.css" />
+    <title>Tu platillo</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <a class="navbar-brand" href="/">
+              <img
+                src="..\img\Restaurante.jpg"
+                alt=""
+                width="200"
+                height="100"
+                class="d-inline-block align-text-top"
+              />
+            </a>
+          </div>
+
+          <div class="col">
+            <h1 id="nombre">Restaruante Michus</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Menú
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="menu.html">Entradas</a></li>
+              <li>
+                <a class="dropdown-item" href="menu.html">Plato fuerte</a>
+              </li>
+              <li><a class="dropdown-item" href="menu.html">Postre</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="platillo.html"
+              >¿Cúal es tu comida favorita?</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Visita nuestras redes sociales
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="http://www.facebook.com"
+                  target="_bank"
+                  >facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="http://www.twitter.com"
+                  target="_bank"
+                  >Twitter</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <form>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label"
+            >¿De que tipo es tu comida favorita?</label
+          >
+          <select id="TipoP" class="form-select">
+            <option selected>Elige</option>
+            <option value="entradas">Entrada</option>
+            <option value="platofuerte">Plato fuerte</option>
+            <option value="postre">Postre</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label"
+            >Como se llama tu platillo</label
+          >
+          <input
+            id="Plato"
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput"
+            placeholder="Tu comida favorita"
+            value=""
+          />
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label"
+            >Puedes darnos una breve descripcion</label
+          >
+          <input
+            id="Desc"
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput2"
+            placeholder="Descripcion"
+            value=""
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label"
+            >Puedes poner una foto de tu platillo</label
+          >
+          <input
+            id="Ft"
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput2"
+            placeholder="Coloca la ubicacion de tu foto"
+            value=""
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label"
+            >Precio sugerido</label
+          >
+          <input
+            id="Precio"
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput2"
+            placeholder="Costo en pesos"
+            value=""
+          />
+        </div>
+        <button class="btn btn-success" id="btnGuardar">Guardar</button>
+        <button class="btn btn-danger" id="btnCancelar"><a id="btnc" href="index.html">Cancelar</a></button>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDa1UviOpAc6p_zOOVT8jEeXU6EwrEs4_8",
+        authDomain: "base-7c35b.firebaseapp.com",
+        databaseURL: "https://base-7c35b-default-rtdb.firebaseio.com",
+        projectId: "base-7c35b",
+        storageBucket: "base-7c35b.appspot.com",
+        messagingSenderId: "499721407694",
+        appId: "1:499721407694:web:fc9f0fcfd26ffd7c61949f",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="js/menu.js"></script>
+  </body>
+</html>
